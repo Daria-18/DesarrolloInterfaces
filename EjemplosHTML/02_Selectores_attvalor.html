@@ -35,6 +35,54 @@
 			background-color: antiquewhite;
 			margin: 3px;
 		}
+
+		/* Selectores añadidos */
+
+		.formulario2{
+			margin-top: 50px;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		}
+
+		#fs2>[disabled]{
+			background-color: rgba(220, 20, 60, 0.616);
+			color: whitesmoke;
+			text-decoration: line-through;
+		}
+
+		#idioma>[selected]{
+			color: rgb(253, 0, 0);
+		}
+
+		[type*=pass]{
+			background-color: blanchedalmond;
+			border: 1px solid black;
+			border-radius: 5px;
+			font-style: italic;
+			padding-left: 2%;
+		}
+
+		[name|="id"] {
+			background-color: rgba(186, 244, 245, 0.654);
+		}
+
+		[name$="2"] {
+			font-weight: bolder;
+		}
+
+		[placeholder ~= "de"] {
+			border: 1px black dashed;
+			border-radius: 3px;
+		}
+
+		#fs2>[placeholder ^= "E"] {
+			border: 1px black dashed;
+			border-radius: 3px;
+		}
+
+		[name="horario1"]{
+			color: crimson;
+		}
+
 	</style>
 </head>
 
@@ -71,6 +119,44 @@
 			<input type="submit" value="Enviar" name="btn-enviar" />
 		</fieldset>
 	</form>
+
+	<!-- Contenido añadido -->
+
+	<form action="#" method="get" class="formulario2">
+		<fieldset id="fs2">
+			<legend>Creación usuario:</legend>
+			<label for="usuario">Nombre de usuario:</label>
+			<input type="text" name="usuario" placeholder="Nombre de usuario aquí"/>
+			<br/>
+			<label for="email">Email:</label>
+			<input type="text" name="email" placeholder="Ej: email@dominio.tld"/>
+			<br/>
+			<label for="password">Introduce una contraseña: </label>
+			<input type="password" name="password" placeholder="Introduce tu contraseña"/>
+			<br/>
+			<label for="passwordConfirm">Confirma tu contraseña: </label>
+			<input type="password" name="passwordConfirm" placeholder="Confirma tu contraseña"/>
+			<br/>
+			<label for="idioma">Idioma a matricular:</label>
+			<select name="idioma" id="idioma">
+				<option value="RUS" name="id-idioma1" selected>Ruso</option>
+				<option value="GER" name="id-idioma2">Alemán</option>
+				<option value="ENG" name="id-idioma3">Inglés</option>
+				<option value="JP" name="id-idioma5" disabled>Japonés</option>
+			</select>
+			<label for="horario">Tramo horario:</label>
+			<select name="horario" id="horario">
+				<option value="primero" name="horario1" selected>12:15-14:00</option>
+				<option value="segundo" name="horario2">15:00-16:30</option>
+				<option value="tercero" name="horario3" disabled>17:00-18:30</option>
+				<option value="cuarto" name="horario4">18:30-21:00</option>
+			</select>
+			<br />
+			<input type="reset" value="Reset" name="clear-button" disabled/>
+			<input type="submit" value="Enviar" name="send-button"/>
+		</fieldset>
+	</form>
+
 </body>
 
 </html>
