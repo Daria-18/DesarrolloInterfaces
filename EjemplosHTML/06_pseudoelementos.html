@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		p::after {
+			content: '\23F4' !important;
+			/* https://www.compart.com/en/unicode/category/So */
+			color: #e03574 !important;
+			font-size: 1.5em;
+		}
+
+		p::before {
+			content: '\1F6C8' !important;
+			/* https://www.compart.com/en/unicode/category/So */
+		}
+
+		p::first-letter {
+			font-size: 200%;
+			color: #8A2BE2;
+		}
+
+		p::first-line {
+			font-family: sans-serif;
+		}
+
+		li::marker {
+			content: '\23F5' !important;
+			/* https://www.compart.com/en/unicode/category/So */
+			color: #e03574 !important;
+		}
+
+		li::selection {
+			color: red;
+			background: yellow;
+		}
+
+		/* Selectores añadidos */
+
+		.contenedor{
+			margin-top: 50px;	
+			border: 3px dashed lightblue;
+			padding: 5px 10px;
+		}
+
+		.contenedor p{
+			color: salmon;
+			font-size: 1.5em;
+		}
+
+		.contenedor p::after{
+			content: none !important;
+			content: '\21A9' !important;
+			margin-left: 10px;
+		}
+
+		.contenedor p::first-letter{
+			color: rgb(19, 233, 248);
+		}
+
+		.contenedor p::before{
+			content: '\21AA' !important; /* https://www.compart.com/en/unicode/category/So */
+			margin-right: 10px;
+		}
+
+		.contenedor p:nth-of-type(2)::before{
+			content: none !important;
+		}
+
+		.contenedor p:nth-of-type(2)::after{
+			content: none !important;
+		}
+
+		.contenedor p:nth-of-type(2)::first-letter{
+			all: unset;
+		}
+
+		.contenedor p:nth-of-type(2)::first-line{
+			text-decoration: underline;
+			font-weight: 600;
+		}
+
+
+		
+
+	</style>
+</head>
+
+<body>
+	<p>Este primer párrafo es bastante importante. Y lo voy a hacer lo más largo posible ya que quiero que se remarque
+		su primera línea. Y si no muestra varias líneas pues no lo vamos a notar.</p>
+	<ul>
+		<li>Primer Elemento</li>
+		<li>Segundo Elemento</li>
+		<li>Tercer Elemento</li>
+	</ul>
+
+	<!-- Elementos HTML añadidos -->
+
+	<div class="contenedor">
+		<p> Este es otro párrafo</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt non aperiam dignissimos, aspernatur, omnis nulla perspiciatis aut quasi at, ullam voluptates? Quod saepe delectus commodi? Eius laboriosam beatae iure aliquid?</p>
+	</div>
+
+</body>
+
+</html>

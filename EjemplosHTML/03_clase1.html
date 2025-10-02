@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Clases en HTML</title>
+  <style>
+    body {
+      background-color: rgb(82, 49, 143);
+    }
+
+    .red {
+      color: red;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    /* Selectores añadidos */
+
+    .contenedor{
+      color: white;
+      border: skyblue 3px dashed;
+      text-align: justify;
+      margin-top: 20px;
+      padding: 10px 30px;
+    }
+
+    .contenedor>p{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    }
+
+    .textoResaltado{
+      margin: auto;
+      width: 50%;
+      margin-top: 5px;
+      color: skyblue;
+      padding: 10px;
+      background-color: violet;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .titular{
+      text-decoration: overline underline;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h2 class="red bold">
+    Este título combina los estilos aplicados de la clase "red"
+    y "bold".
+  </h2>
+  <p>A este párrafo no se le ha aplicado ninguna clase.</p>
+  <p class="red">Pero a este sí</p>
+  <div class="bold">Y a este div también</div>
+
+  <!-- HTML añadido -->
+  <div class="contenedor">
+    <h1 class="titular">Título contenedor</h1>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi laborum id atque, obcaecati quibusdam eos corporis provident voluptates, qui saepe ab tenetur! Commodi expedita ipsa aliquam aperiam dolorem possimus excepturi!</p>
+    <p class="textoResaltado"> Texto de ejemplo 1 </p>
+    <p class="textoResaltado"> Texto de ejemplo 2 </p>
+    <p class="textoResaltado"> Texto de ejemplo 3 </p>
+    <p class="textoResaltado"> Texto de ejemplo 4 </p>
+  </div>
+
+</body>
+
+</html>

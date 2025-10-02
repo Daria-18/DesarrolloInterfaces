@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo con ID en CSS</title>
+  <style>
+    /* Estilo aplicado al elemento con ID "tituloPrincipal" */
+    #tituloPrincipal {
+      color: darkgreen;
+      font-size: 28px;
+      text-align: center;
+      border-bottom: 2px solid darkgreen;
+      padding-bottom: 10px;
+    }
+
+    /* Estilo aplicado al elemento con ID "parrafoDestacado" */
+    #parrafoDestacado {
+      background-color: lightyellow;
+      font-style: italic;
+      padding: 10px;
+      border: 1px solid orange;
+      border-radius: 8px;
+    }
+
+
+    /* Selectores añadidos */
+    #contenedor{
+      columns: 2;
+      border: 2px dashed darksalmon;
+      padding: 10px;
+      width: 80%;
+      margin: auto;
+    }
+
+    #textoNormal{
+      margin: auto;
+      margin-top: 50px;
+      width: 50%;
+    }
+
+    #lorem2{
+      text-shadow: 2.1em -.8em 3em rgb(37, 211, 250);
+      text-align: justify;
+      font-size: large;
+    }
+
+    #lorem1{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- identificamos h1 como tituloPrincipal -->
+  <h1 id="tituloPrincipal">Este es el título principal</h1>
+
+  <!-- identificamos p como parrafoDestacado -->
+  <p id="parrafoDestacado">Este párrafo está destacado con un identificador único.</p>
+
+  <!-- Otro párrafo normal sin ID -->
+  <p>Este párrafo no tiene ID, así que no recibe el estilo especial.</p>
+
+  <!-- HTML añadido -->
+  <div id="contenedor">
+    <p id="lorem1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ea delectus vero est deleniti nihil reiciendis nemo culpa, harum ex alias deserunt, illum optio assumenda sapiente nisi? Dicta, vero consectetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quia. Officia cum nulla at ipsum minus cupiditate autem consectetur laborum error, quasi tenetur deserunt corporis culpa doloremque nostrum nobis magni.</p>
+  </div>
+  <div id="textoNormal">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ea delectus vero est deleniti nihil reiciendis nemo culpa, harum ex alias deserunt, illum optio assumenda sapiente nisi? Dicta, vero consectetur.</p>
+    <p id="lorem2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quia. Officia cum nulla at ipsum minus cupiditate autem consectetur laborum error, quasi tenetur deserunt corporis culpa doloremque nostrum nobis magni.</p>
+  </div>
+</body>
+
+</html>

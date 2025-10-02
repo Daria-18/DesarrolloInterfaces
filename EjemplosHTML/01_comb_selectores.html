@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		/*Para todo <span> que esté dentro de un <p> (descendiente)*/
+		p span {
+			background-color: aqua;
+		}
+
+		/*Para todo <span> que sea hijo directo de un <div>*/
+		div>span {
+			background-color: bisque;
+		}
+
+		/*Para todo <b> que vaya inmediatamente después de un <span> (hermano adyacente)*/
+		span+b {
+			margin: 6px;
+			background-color: burlywood;
+		}
+
+		/*Para todo <div> que sea hermano posterior de un <p> dentro del mismo nivel*/
+		p~div {
+			border: 1px solid cadetblue;
+		}
+
+
+		/* Selectores de estilos añadidos */
+
+		/* Selector de hermano adyacente */
+		div + div{
+			border: 2px solid lightpink;
+			border-radius: 10px;
+			box-shadow: rgba(233, 66, 235, 0.81) 20px -10px 30px ;
+			margin-top: 50px;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: rgba(238, 216, 238, 0.53);
+		}
+
+		/* Selector de hijo directo */
+		div > h1{
+			text-align: center;
+			font-weight: 400;
+			font-style: italic;
+		}
+
+		/* Selector de hermano posterior */
+		h1 ~ p{
+			margin-left: 10px;
+			font-size: 1.5em;
+		}
+
+		/* Selector descendiente y combinación */
+		div > h1~div {
+			all: unset;
+			display: block;
+			background-color: rgba(232, 66, 235, 0.175);
+			font-size: .7em;
+			text-align: center;
+			margin: 15px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<p>Primer párrafo.</p>
+		<p><span>Primera palabra</span> del segundo párrafo.</p>
+		<div>
+			<p>
+				<span>Primera palabra</span>
+				<b>remarcada</b> <strong>e importante</strong>
+				dentro de un párrafo más interior
+			</p>
+			<span>Sólo es una frase <b>suelta</b>.</span>
+		</div>
+	</div>
+
+	<!-- Elementos HTML añadidos -->
+	<div> 
+		<h1>Esto es un titular</h1>
+		<p>Y esto es otro párrafo</p>
+		<div>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor voluptatum corrupti possimus rem atque, excepturi reprehenderit cupiditate doloribus! Voluptates nam numquam nobis sint, deserunt ipsum. Obcaecati perspiciatis quod voluptatem aliquam.</p>
+		</div>
+	</div>
+	<!-- // Fin de elementos HTML añadidos -->
+
+</body>
+
+</html>

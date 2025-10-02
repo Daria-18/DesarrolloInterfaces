@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<base href="https://www.w3schools.com/" target="_blank" />
+	<style>
+		a {
+			margin: 4px;
+			padding: 3px;
+			border: 2px solid;
+		}
+
+		button {
+			margin: 5px;
+		}
+
+		a:link {
+			border-color: grey;
+			background-color: silver;
+			color: grey;
+		}
+
+		a:hover {
+			border-color: lightyellow;
+			background-color: darkgrey;
+			color: lightyellow;
+		}
+
+		a:active {
+			border-color: beige;
+			background-color: dimgrey;
+			color: beige;
+		}
+
+		a:visited {
+			color: bisque;
+		}
+
+		input:disabled {
+			background-color: #dddddd;
+		}
+
+		input:enabled {
+			background-color: aliceblue;
+		}
+
+		input:checked {
+			width: 20px;
+			height: 20px;
+		}
+
+		/* Selectores añadidos */
+
+		.formUser{
+			margin: auto;
+			margin-bottom: 5px;
+			display: block;
+			width: 80%;
+		}
+
+		.botones{
+			all: unset;
+			padding: 5px;
+			margin: 2px 5px;
+			border: 2px solid ;
+		}
+
+		.hover:hover{
+			transform: scale(102%);
+		}
+
+		.formUser:required{
+			border-color: red;
+			background-color: antiquewhite;
+		}
+
+		.formUser:required:user-valid{
+			border-color: greenyellow;
+		}
+
+		.botones:first-child{
+			background-color: rgba(255, 5, 80, 0.692);
+			color: blueviolet;
+			border: none;
+		}
+
+		.botones:last-child{
+			border: none;
+			background: none;
+			color: rgb(2, 40, 255);
+			font-weight: bold;
+		}
+
+		.botones:link{
+			font-style: oblique;
+		}
+
+		.botones:visited{
+			color: green;
+		}
+
+		.botones:active{
+			color: transparent;
+			background-color: transparent;
+		}
+
+		.formUser~*>[type="checkbox"]{
+			all: revert;
+			scale: 50%;
+		}
+
+		.formUser~*>[type="checkbox"]:checked{
+			scale: 120%;
+		}
+	</style>
+	<script>
+		function habilitarDeshabilitar() {
+			element = document.querySelector("input[type='text']");
+			if (element.disabled) {
+				element.removeAttribute("disabled");
+				document.getElementsByTagName("button")[0].innerHTML = "Habilitar";
+			} else {
+				element.setAttribute('disabled', '');
+				document.getElementsByTagName("button")[0].innerHTML = "Deshabilitar";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input type="text" placeholder="Pon algo..." disabled />
+	<input type="checkbox" name="checkbox">
+	<label for="checkbox">Selecionar</label>
+	<br /><br />
+	<nav>
+		<a href="/html/">HTML</a> |
+		<a href="/css/">CSS</a> |
+		<a href="/js/">JavaScript</a> |
+		<a href="/python/">Python</a>
+	</nav>
+	<button onclick="habilitarDeshabilitar()">Habilitar</button>
+
+	<!-- HTML añadido -->
+	<hr>
+	<fieldset class="hover">
+		<legend>Creación de usuario</legend>
+		<input required class="formUser" type="text" placeholder="Introduce tu nombre"/>
+		<input required class="formUser" type="text" placeholder="Introduce tu nombre de usuario"/>
+		<input required class="formUser" type="password" placeholder="Introduce una contraseña"/>
+		
+		<label for="checkbox2">
+			<input type="checkbox" name="checkbox2">
+			Acepto Terminos y condiciones
+		</label>
+		<br /><br />
+		<nav>
+			<a class="botones" href="/html/">Olvidé mi contraseña</a>
+			<a class="botones" href="/css/">Iniciar sesión</a>
+		</nav>
+
+	</fieldset>
+	
+</body>
+
+</html>
