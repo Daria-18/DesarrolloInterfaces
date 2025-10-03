@@ -1,0 +1,53 @@
+body {
+
+  font-family: Arial, sans-serif;
+
+}
+
+/* Rename de clase .card a .tarjeta */
+.tarjeta {
+
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 2%;
+    border: 2px black solid;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 15px 10px 20px rgba(128, 128, 128, 0.767);
+    background: #e8c5d2;
+    background: radial-gradient(circle, rgba(232, 197, 210, 1) 10%, rgba(148, 187, 233, 1) 100%);
+
+}
+
+.tarjeta > img{
+    padding: 0px 20px;
+}
+
+.tarjeta>h2{
+    font-size: 1.5em;
+}
+
+.precio{
+   text-decoration: underline;
+   padding: 5px;
+   font-style: italic;
+   display: inline-block;
+}
+
+.tarjeta > button{
+    margin-top: 15px;
+    background-color: #e8c5d2;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+.tarjeta > button:hover{
+
+    background: #ecc1e5;
+    color: rgb(176, 76, 235);
+    font-style: italic;
+    text-decoration: underline;
+
+}
