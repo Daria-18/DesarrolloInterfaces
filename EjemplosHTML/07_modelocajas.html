@@ -42,6 +42,71 @@
 			height: 25px;
 			display: inline-block;
 		}
+
+		/* Cambios añadidos */
+		#secundario{
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			border: 3px dotted crimson;
+			margin: 15px;
+			padding: 15px;
+			text-align: center;
+		}
+
+		#secundario>.caja {
+			border: 2px solid crimson;
+			background-color: peachpuff;
+			padding: 20px;
+			margin: 20px;
+			width: 250px;
+			height: 100px;
+			box-sizing: content-box; /* set box-size to initial value (content-box); no tiene en cuenta border y padding*/
+		}
+
+		/* alternativo -> border-box 
+		border-box tiene en cuenta border y padding en
+		el calculo total del ancho y alto */
+		#secundario>.alternativo{
+			box-sizing: border-box; /* set box-size to border-box */
+			border: 5px solid crimson;
+		}
+
+		#secundario>.contenedor{
+			border: 2px solid salmon
+		}
+		
+		#secundario>.contenedor>.contenido{
+			border: 2px dashed crimson;
+			background-color: rgb(237, 192, 217);
+			margin-top: 15px;
+			margin-right: 10px;
+			margin-left: -25px;
+			margin-bottom: -20px;
+		}
+		
+		#secundario>.contenedor{
+			margin-top: 35px;
+		}
+
+		#tercero {
+			margin-bottom: 35px; /* Prevalece realmente */
+		}
+		#cuarto {
+			margin-top: 5px;
+		}
+
+		#secundario>p>span.caja {
+			border: 2px dashed crimson;
+			background-color: rgb(248, 232, 217);
+			display: inline; /* set to initial value */
+		}
+
+		#secundario>p>span.visual {
+			width: 30px;
+			height: 10px;
+			margin: auto;
+			display: inline-block; /* set de vuelta a inline block */
+		}
+
 	</style>
 </head>
 <body>
@@ -57,6 +122,23 @@
     	<div class="contenedor">
         	<p id="primero">El margen inferior de este párrafo se va a combinar con el margen superior del siguiente.</p>
         	<p id="segundo">El margen superior de este párrafo se va a combinar con el margen inferior del anterior.</p>
+    	</div>
+    	<p>En este párrafo tenemos un <span class="caja">span</span> que como es un elemento en línea, no respeta el ancho y largo, pero su margen y relleno pueden tapar partes próximas.</p>
+    	<p>Para evitar que el margen y relleno de un <span class="caja visual">span</span> pueden tapar partes próximas, aplicamos la propiedad <code>display:inline-block</code>.</p>
+    </div>
+
+	<!-- Codigo HTML con clases o ids modificadas -->
+	<div id="secundario">
+    	<h1>Título  2</h1>
+    	<h2>Título secundario 2</h2>
+    	<div class="caja">Esta caja hace uso del <em>modelo estándar</em>. Width (294px) y Height (144) = Content (fijado a 250px y 100px respectivamente) + Padding (20 * 2) + Border (2 * 2)</div>
+    	<div class="caja alternativo">Esta caja hace uso del <em>modelo alternativo</em>. Width (250px), Height (100px)</div>
+    	<div class="contenedor">
+        	<div class="contenido">Esta caja aplica un margen para superponerse a su contenedor.</div>
+    	</div>
+    	<div class="contenedor">
+        	<p id="tercero">Estos margenes se sobreponen</p>
+        	<p id="cuarto">Estos margenes se sobreponen</p>
     	</div>
     	<p>En este párrafo tenemos un <span class="caja">span</span> que como es un elemento en línea, no respeta el ancho y largo, pero su margen y relleno pueden tapar partes próximas.</p>
     	<p>Para evitar que el margen y relleno de un <span class="caja visual">span</span> pueden tapar partes próximas, aplicamos la propiedad <code>display:inline-block</code>.</p>
