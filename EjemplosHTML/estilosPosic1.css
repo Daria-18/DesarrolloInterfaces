@@ -44,10 +44,10 @@ footer {
 
 /*Aplicamos POSITION RELATIVE a los contenedores, para que sean referencia de los elementos hijos que tengan POSITION ABSOLUTE*/
 .contenedor {
-	position: relative;
+	position: relative; /*con position static, devolvemos el valor inicial al contenedor*/
 	border: 3px dotted lightgray;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	/*con display:flex y flex-flow:row wrap distribuimos los elementos de forma fluida (no desbordan el espacio)*/
 	height: 350px;
 	margin-top: 10%;
@@ -67,19 +67,22 @@ div>div {
 }
 
 .relativo {
-	position: relative;
+	position: relative; /* Posicion relativa al elemento contenedor (clase .contenedor) */
 	background-color: #722;
-	top: 50px;
-	left: 50px;
+	top: -50px; /* si aumentamos o disminuimos desplazaremos la "caja" 
+	dejando más o menos hueco en la parte superior, similar a un margen*/
+	left: 150px; /* Lo mismo pero en la izquierda */
 	/*Las cajas de esta clase mantiene el espacio original pero desplazado 50 px hacia abajo y otros 50 px a la derecha.*/
 	/*Relative --> Los hijos de esta caja con absolute se posicionarían respecto a él.*/
 }
 
+/* position absolute hace que la posición dependa del elemento padre mas cercano a este,
+en caso de no aplicarse, se hará en base al viewport  */
 .absoluto {
 	position: absolute;
 	background-color: #333;
-	bottom: 10px;
-	left: 10px;
+	bottom: 100px;
+	right: 250px;
 	/*absolute saca el elemento del flujo normal, como si flotara encima de los demás. */
 	/*bottom:10px; y left:10px; se calculan respecto al ".contenedor" porque tiene position: relative.*/
 }
@@ -91,6 +94,10 @@ div>div {
 	/*Las cajas "absoluto segundo" se colocará en la esquina inferior derecha del contenedor.*/
 }
 
+/*sticky es una mezcla entre relative y fixed. Al principio se comporta como relative, pero al hacer scroll y su borde superior alcance top:25%, 
+    se queda fijo en la pantalla. Muy útil para menús laterales o cabeceras de secciones que deseamos tener visibles parcialmente*/
+
+/* position fixed, se posiciona en base al viewport (ventana del navegador) de manera fija */
 .sticky {
 	position: sticky;
 	background-color: #229;
@@ -99,5 +106,3 @@ div>div {
 	top: 25%;
 }
 
-/*sticky es una mezcla entre relative y fixed. Al principio se comporta como relative, pero al hacer scroll y su borde superior alcance top:25%, 
-    se queda fijo en la pantalla. Muy útil para menús laterales o cabeceras de secciones que deseamos tener visibles parcialmente*/
