@@ -33,10 +33,23 @@
     }
 
     
+    /*Otros cambios*/
 
-   
-    
-    
+    .caja2{
+      color: initial; /*reset a valor inicial*/ 
+      border: unset; /* unset border, alto y ancho */
+      width: unset;
+      height: unset;
+    }
+
+    /* Aplicamos sobre p de la caja 2 */
+    .caja2>p{
+      color: blue; /* se vuelve a asignar un color */
+      margin: 1em;
+      padding: .8em;
+      border: dashed black 2px;
+    }
+
   </style>
 </head>
 
@@ -48,6 +61,14 @@
     </article>
     <article class="caja">
       <p>Este es el contenido de la noticia 2.</p>
+    </article>
+  </section>
+  <section class="seccion2">
+    <article class="caja caja2">
+      <p>Este es el contenido de la caja 3.</p>
+    </article>
+    <article class="caja caja2">
+      <p>Este es el contenido de la caja 4.</p>
     </article>
   </section>
 </body>
