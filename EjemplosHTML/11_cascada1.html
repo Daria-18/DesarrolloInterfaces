@@ -32,10 +32,53 @@
         border-radius: 8px;
       }
     }
+
+    /*Prueba, añadiendo elementos*/
+
+    @layer reset2, base2, theme2;
+
+    /* Ordenamos las capas */
+    @layer reset2 {
+      .ej2{
+        all: unset;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+    }
+
+    @layer base2 {
+      .ej2>button {
+        padding: 10px 20px;
+        border: 1px dashed crimson;
+        color: black;
+      }
+      .ej2{
+        background-color: rgba(255, 198, 192, 0.646);
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+        padding: 5px;
+      }
+    }
+
+    @layer theme2 {
+      .ej2>button {
+        background: rgb(133, 242, 250);
+        color: rgb(154, 61, 252);
+        border-radius: 8px;
+      }
+    }
+
+
   </style>
 </head>
 <body>
   <h2>Ejemplo con @layer</h2>
   <button>Botón con capas</button>
+  <div class="ej2">
+    <h2>Ejemplo con @layer 2</h2>
+    <button>Botón con capas 2</button>
+  </div>
+
 </body>
 </html>

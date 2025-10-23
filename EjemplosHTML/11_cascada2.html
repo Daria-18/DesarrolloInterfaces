@@ -18,6 +18,13 @@
         font-style: italic;
       }
     }
+    /*added*/
+
+    @scope(.articulo){
+      p+h2{
+        color: green;
+      }
+    }
   </style>
 </head>
 <body>
@@ -26,6 +33,7 @@
   <div class="articulo">
     <h2>Este h2 es rojo (scope)</h2>
     <p>Párrafo en cursiva solo dentro del scope.</p>
+    <h2>Este h2 es verde (scope)</h2>
   </div>
 
   <h2>Este h2 vuelve a ser azul</h2>
