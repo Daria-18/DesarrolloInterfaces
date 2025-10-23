@@ -39,6 +39,45 @@
       color: inherit;
       /* Vuelve al valor inicial por defecto del navegador (normalmente negro) */
     }
+
+
+    /*Elementos añadidos*/
+    .seccion2{
+      all: initial; /*se resetea todo lo añadido. Borde pertenece a body */
+    }
+
+    .seccion2{
+      display: block;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      border: dotted 1px crimson;
+      color: salmon;
+      margin: 10px;
+      padding: 5px;
+      width: 500px;
+      height: 400px;
+    }
+
+    .seccion2>h2{
+      border: inherit;
+      padding: 5px;
+      background-color: aliceblue;
+    }
+
+    .caja2{
+      color: inherit;
+      border: inherit;
+      margin: inherit;
+      padding: inherit;
+    }
+
+    .caja2>p{
+      color: initial;/*Se vuelve a negro el color de los parrafos*/
+    }
+
+    .caja2>p>span{
+      color: burlywood;
+    }
+
   </style>
 </head>
 
@@ -52,6 +91,19 @@
       <p>Este es <span>el contenido de </span> la noticia 2.</p>
     </article>
   </section>
+
+  <br/>
+  <section class="seccion2">
+    <h2>Sección 2</h2>
+    <br/>
+    <article class="caja2">
+      <p>Este es el contenido de la caja1</p>
+    </article>
+    <article class="caja2">
+      <p>Este es <span>el contenido de </span> la caja 2</p>
+    </article>
+  </section>
+
 </body>
 
 </html>
