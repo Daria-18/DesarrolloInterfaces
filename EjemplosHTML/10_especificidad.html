@@ -30,6 +30,43 @@
     .forzado {
       background: orange !important;
     }
+
+    /*Elementos añadidos*/
+
+    /*Clase con reset*/
+    .resetClass{
+      all: initial; /*Se resetea el div que contiene todos los elementos añadidos*/
+    }
+
+    /*Selector de etiqueta*/
+    article{
+      background-color: blueviolet; /*Prevalece el color de la clase del <p> */
+    }
+
+    /*Selector de clase*/
+    .container2{
+      background-color: wheat;
+      padding: 10px;
+      color: darkblue;
+    }
+
+    /* Selector de id */
+    #element2{
+      background: greenyellow;
+    }
+
+    /* Selector combinado */
+    .container2 strong{
+      background: plum;
+      padding: 5px;
+      margin: 5px
+    }
+
+    /* Con !important (maxima prioridad) */
+    .forzado2 {
+      background: pink !important; /*Prevalece al style debido al important*/
+    }
+
   </style>
 </head>
 <body>
@@ -53,5 +90,32 @@
     - estilo inline (background: pink)<br>
     - clase con !important (forzado)
   </div>
+
+
+  <!--Estructura añadida-->
+
+  <br/>
+  <div class="resetClass">
+    <h2>Ejemplos añadidos: </h2>
+    <br/>
+    <div class="container2" id="element2">
+      Soy un div con <strong>id="element2"</strong>
+      y <strong>class="container2"</strong>
+    </div>
+
+    <!--Uso de etiquetas semanticas para poder hacer uso del selector de etiqueta-->
+    <article>
+      <p class="container2">Párrafo con class="container2" dentro de section</p>
+    </article>
+
+    <!--Prevelace el style sobre el container2-->
+    <div class="container2 forzado2" id="element3" style="background: rgb(209, 192, 255);">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab vel, cum consectetur magni cupiditate error temporibus repudiandae quae similique consequatur optio molestias, velit nulla quaerat at? Fugit, veritatis libero.
+      <br/>
+      <br/>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vel consequuntur illo nobis fugit non adipisci minus excepturi sunt, inventore doloremque eos beatae laborum dignissimos dolorum blanditiis a ad. Corporis.
+    </div>
+  </div>
+
 </body>
 </html>
