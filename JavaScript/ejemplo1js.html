@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS - Ejemplo 1</title>
     <script>
         //Vamos a declarar "automaticamente" la variable "marcaCoche" y le asignamos un valor.
         marcaCoche = "Volkswagen"
@@ -14,12 +14,31 @@
             Una con 'var' con scope global que podra ser usada fuera del if
             y otra con 'let' que solo tiene un scope "local" y solo usaremos dentro del if.
             */
-           var modeloCoche = "25"
-           let precio = 5000.25
+           var modeloCoche = "ZS"
+
+            // Variable con scope dentro del if usando "let"
+           let versionCoche = "luxury"
+
+           //Mostramos por consola los valores de dentro del if
+           console.log("Dentro del IF:")
+           console.log("Marca: ", marcaCoche)
+           console.log("Modelo: ", modeloCoche)
+           console.log("Versión: ", versionCoche)
         }
+
+        // Al intentar mostrar por consola el valor de la variable "versionCoche"
+        // Fuera del IF, indica que no tiene un valor asignado
+        console.log("Fuera del IF:")
+        console.log("Marca: ", marcaCoche)
+        console.log("Modelo: ", modeloCoche)
+        console.log("Versión: ", versionCoche)
+        console.log("El " + marcaCoche + modeloCoche + " tiene la versión: "
+            + versionCoche
+        )
     </script>
 </head>
 <body>
-    
+    <h1>Demo JavaScript en &lt;Head&gt;</h1>
+    <p>Abre la consola del navegador para ver el resultado.</p>
 </body>
 </html>
