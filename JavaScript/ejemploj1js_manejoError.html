@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ejemplo 1 (try/catch)</title>
+    <script>
+        //Vamos a declarar "automaticamente" la variable "marcaCoche" y le asignamos un valor.
+        marcaCoche = "Volkswagen"
+
+        //Iniciamos un condicional.
+        if (marcaCoche === "Volkswagen") {
+            /* Declaramos dos variables en su bloque de código:
+            Una con 'var' con scope global que podra ser usada fuera del if
+            y otra con 'let' que solo tiene un scope "local" y solo usaremos dentro del if.
+            */
+           var modeloCoche = "ZS"
+
+            // Variable con scope dentro del if usando "let"
+           let versionCoche = "luxury"
+
+           //Mostramos por consola los valores de dentro del if
+           console.log("Dentro del IF:")
+           console.log("Marca: ", marcaCoche)
+           console.log("Modelo: ", modeloCoche)
+           console.log("Versión: ", versionCoche)
+        }
+
+        // Al intentar mostrar por consola el valor de la variable "versionCoche"
+        // Fuera del IF, indica que no tiene un valor asignado
+        console.log("Fuera del IF:")
+        console.log("Marca: ", marcaCoche)
+        console.log("Modelo: ", modeloCoche)
+        //console.log("Versión: ", versionCoche)
+        //console.log("Coche: " + marcaCoche + modeloCoche)
+
+        // Manejamos el error para que el ejemplo no falle usando la estructura try/catch
+         try {
+            console.log("Versión: ", versionCoche)
+        } catch (ReferenceError) {
+            console.log("No se pudo conseguir la versión del coche ya que no está definida.")
+        }
+
+
+        /* Mini-actividad 1: 
+        1. Incluye variables declaradas que almecenen la siguiete información:
+        Nombre, Edad, ¿Te gusta X? (boolean), ¿Cuál es tu X favorito/a?, Altura en metros (float)
+        2. Muestralas en consola
+        */
+       const nombre = "Pepito"
+       var edad = 54
+       let isTeGustaProgramar = false
+       var comidaFavorita = "Ramen"
+       var altura = 1.62
+       let ciudad = "Sabadell"
+
+       console.log("Tu nombre es:", nombre, "Tu edad es de:", edad,
+       "Te gusta programar:", isTeGustaProgramar, "Comida favorita: ",comidaFavorita,
+       "Altura:", altura, "Eres de la ciudad:", ciudad
+        )
+
+        // Se puede reasignar el valor en un console.log
+        console.log("Ciudad:", ciudad="Vallecas")
+
+        // SyntaxError exception, identificador ciudad ya ha sido declarado.
+        // Cannot redeclare block-scoped variable 'ciudad'. No se puede reasignar
+        // let ciudad = "otraCiudad"
+        ciudad = "Leningrado"
+        console.log("Ciudad:", ciudad)
+
+        // Uncaught TypeError: Assignment to constant variable.
+        //console.log("Nombre:", nombre="John")
+
+        /*Mini-actividad 1:
+        Declaramos con const un objeto y le asignamos variables
+        */
+       const person = {nombre : "Pedro", edad : 53}
+       console.log(person)
+
+       person.edad=12
+       console.log(person)
+
+       // TypeError porque estamos sobreescribiendo las claves. Para modificar: 
+       // objeto.atributo = valor;
+
+       //person = {}
+       //person = {n:"Antonio", e:23}
+       //person = {nombre: "Antonio", edad: 25}
+
+       /*Mini-actividad 1:
+        Declaramos con const una constante de tipo array y le asignamos variables
+        */
+       const lista = ["melocotón","manzana"]
+       console.log(lista)
+
+       lista.push("pera")
+       //lista.concat("albaricoque")
+       console.log(lista)
+    </script>
+</head>
+<body>
+    <h1>Demo JavaScript en &lt;Head&gt;</h1>
+    <p>Abre la consola del navegador para ver el resultado.</p>
+</body>
+</html>
