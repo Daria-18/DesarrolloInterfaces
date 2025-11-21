@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ejemplo 1 (try/catch)</title>
+    <script>
+        //Ej1
+        var nombre = "Pepito"
+        var edad = 25
+        var altura = 1.75
+        var esAlumno = false
+
+        console.log("Nombre:",nombre)
+        console.log("Edad:",edad)
+        console.log("Altura:",altura)
+        console.log("Es alumno:",esAlumno)
+
+        //Ej2
+        const PI = 3.1416
+        //TypeError: Assignment to constant variable
+        //PI = 4
+        console.log(PI)
+
+        //Ej3
+        var alumno = {nombre: "Antonio", edad: 16, curso:"DAM2"}
+        console.log(alumno)
+        console.log(alumno.nombre,alumno.edad)
+
+        //Ej 4
+        var arrayNotas = [5,7,3]
+        console.log(arrayNotas[0],arrayNotas[2])
+        arrayNotas.push(10)
+        console.log(arrayNotas)
+
+        //Ej5
+        if(true){
+            var ejemplo1 = 2
+            let ejemplo2 = 3
+            const ejemplo3 = 4
+        }
+
+        console.log(ejemplo1)
+
+        // Ejemplo 2 no definido
+        // console.log(ejemplo2)
+
+        //Ejemplo 3 no definido
+        //console.log(ejemplo3)
+
+
+        //Ej6
+        //Deberia de requerir el uso de ; al final de cada linea
+        "use strict";
+        var x = 10;
+        console.log(x);
+
+        //Ej7
+        a = 10
+        b = 3
+
+        console.log(a+b,a-b,a*b,a/b,a%b)
+
+        //Ej8        
+
+        //base = "f"
+        //altura = [2,3]
+
+        try {
+            //prompt para forzar excepción si se interrumpe 
+            var base = prompt("Introduce una base")
+            var altura = prompt("Introduce una altura")
+
+            let aux = base * altura
+            if(!isNaN(aux) && base>0 && altura>0){
+                console.log(aux)                
+            }
+            else{
+                console.log("Introduce dos valores numéricos mayores a 0")
+            }
+        } catch (error) {
+            console.log("Introduce dos numéricos")
+        }
+
+        //Ej9
+        var numeroEjemplo = 2
+        console.log(numeroEjemplo**2)
+        console.log(numeroEjemplo**3)
+        console.log(numeroEjemplo**(1/3))
+
+        //Ej10
+        var n = 5
+        console.log(++n) //incrementa, despues imprime
+        console.log(n++) //imprime, despues incrementa
+        console.log(n) //valor final de n
+
+        //Ej11
+        x = 20
+        x-=5
+        console.log(x)
+
+        x *= 2
+        console.log(x)
+
+        x /= 5
+        console.log(x)
+
+        //Ej12
+        console.log("10"-3) //Parsea la string a numerico y opera
+        console.log("10"+3) // concatena al usar el signo mas en vez de operar
+
+        //Ej13
+        5=="5" //true, compara valor, no tipo de objeto
+        5==="5"   // false, al comparar numerico con string
+        0==false // true, 0 = booleano en valor numerico
+        0===false //false, no son el mismo tipo
+        1!=="1" //true, diferente de string, debido a comparar el tipo tambien
+        1!=true //false, el valor es el mismo ya que solo comparamos valor
+
+        //console.log(0===false)
+
+
+        //Ej14
+        var edad1 = 20
+        var edad2 = 33
+        console.log("Es edad1 mayor que edad2:",edad1>edad2)
+        console.log("Es edad1 menor que edad2:",edad1<edad2)
+        console.log("Es edad1 igual que edad2:",edad1==edad2)
+
+        //Ej15
+        "casa">"coche"
+        "Perro"<"gato"
+        "A"<"a"
+
+        //Compara orden alfabetico en base a UNICODE, precede en bits las mayúsculas a las minúsculas
+        console.log("casa">"coche","Perro"<"gato","A"<"a")
+
+        //Ej16
+        var nota = 7
+        if (nota>5) {
+            console.log("Aprobado")
+        } else {
+            console.log("Suspenso")
+        }
+
+        //Ej17
+        edad = 22
+        tieneCarnet = true
+        if(edad>=18 && tieneCarnet){
+            console.log("Puedes conducir")
+        }else{
+            console.log("No puedes conducir")
+        }
+
+        //Ej18
+        esFinDeSemana = true
+        tieneDeberes = false
+
+        if(esFinDeSemana && !tieneDeberes){
+            console.log("Puedes salir")
+        }else{
+            console.log("No puedes salir")
+        }
+
+        //Ej19
+        n = 12
+        //n = 2
+        if(n<=20 && n>=10){
+            console.log("Numero entre 10 y 20:",n)
+        }
+
+        //Ej20
+        //SyntaxError
+        //console.log(true &&);
+        console.log(true);
+
+        //Ej21
+        var number21 = 12.4
+        var string21 = "hola"
+        var boolean21 = false
+        var objeto21 = {valor1 : "AAAA", valor2 : "BBBB"}
+        var array21 = [1,2,3]
+        var null21 = null
+        var undefined21 = undefined
+
+        console.log(typeof(number21))
+        console.log(typeof(string21))
+        console.log(typeof(boolean21))
+
+        // Tanto un array como null, devuelven typeOf de objeto generico (debido a la herencia)
+        console.log(typeof(objeto21))
+        console.log(typeof(array21))
+        console.log(typeof(null21)) 
+
+        console.log(typeof(undefined21))
+
+        //Ej22
+        frutas = ["manzana","pera"]
+        console.log(typeof frutas)
+
+        //Es tanto una instancia de Objeto genérico como de Array
+        console.log(frutas instanceof(Array)) 
+        console.log(frutas instanceof(Object))
+
+        //Ej23
+        fecha = new Date();
+        //Idem al ejercicio anterior
+        console.log(typeof fecha)
+        console.log(fecha instanceof Date, fecha instanceof Object)
+
+        //Ej24
+        //Debes añadir un objeto. SyntaxError
+        //console.log(typeof )
+        console.log(typeof "AAA")
+
+        //Ej25
+        nombre = "Lucía"
+        apellido = "García"
+        nombreCompleto = nombre+" "+apellido
+
+        console.log("Nombre completo:",nombreCompleto)
+        
+        //Ej26
+        mensaje = "Hola"
+        mensaje += " mundo"
+        console.log(mensaje)
+
+        //Ej27
+        console.log("5" + 5) //Concat
+        console.log(5 + "5") //Concat
+        console.log(5 + 5 + "5") // Opera al empezar por numerico y concatena
+        console.log("5" + 5 + 5) // Concatena al empezar por string
+
+        //Ej28
+        palabra = "JavaScript"
+        console.log(palabra[0]) //primer caracter
+        console.log(palabra[palabra.length-1]) //ultimo caracter
+        console.log(palabra.length) //numero de caracteres
+        console.log(palabra[100]) //undefined porque está fuera de rango
+
+        //Ej29
+        let texto = "hola"
+        //Texto no es una función. TypeError exception
+        //texto()
+
+        //Ej30
+        edad = 19
+        edad<18 ? console.log("Menor de edad"):console.log("Mayor de edad")
+
+        //Ej31
+        nota = 6
+        nota>=5 ? console.log("Aprobado") : console.log("Suspenso") 
+
+        //Ej32
+        esAdmin = true
+        //esAdmin = false
+
+        esAdmin ? console.log("Acceso total") : console.log("Acceso limitado")
+
+    </script>
+</head>
+<body>
+    <h1>Demo JavaScript en &lt;Head&gt;</h1>
+    <p>Abre la consola del navegador para ver el resultado.</p>
+</body>
+</html>
