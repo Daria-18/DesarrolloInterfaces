@@ -25,6 +25,22 @@
        stringAux = objetoAlumno.saludar()
        console.log(stringAux)
        objetoAlumno2.pasarLista()
+
+       let cuenta = {
+        titular: "Antonia",
+        saldo: 2243.2,
+        ingresar(cantidad){
+            this.saldo += cantidad
+        },
+        mostrarSaldo(){
+            //return saldo
+            console.log("Saldo actual:",this.saldo)
+        }
+       }
+
+       cuenta.mostrarSaldo()
+       cuenta.ingresar(150)
+       cuenta.mostrarSaldo()       
     </script>
 </head>
 <body>
