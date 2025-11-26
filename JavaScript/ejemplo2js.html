@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Ejemplo 2 </title>
+    <script>
+       const objetoAlumno = {
+        nombre: "Sonia",
+        apellido: "Diez",
+        saludar: function pasarLista(){
+            console.log("Soy",this.nombre,this.apellido)
+            return "Está " + this.nombre + " " + this.apellido
+        }
+       }
+
+       const objetoAlumno2 = {
+        nombre: "Miguel",
+        apellido: "Perez",
+        pasarLista(){
+            console.log("Soy",this.nombre,this.apellido)
+        }
+       }
+
+       stringAux = objetoAlumno.saludar()
+       console.log(stringAux)
+       objetoAlumno2.pasarLista()
+    </script>
+</head>
+<body>
+    <h1>Demo JavaScript en &lt;Head&gt;</h1>
+    <p>Abre la consola del navegador para ver el resultado.</p>
+</body>
+</html>
