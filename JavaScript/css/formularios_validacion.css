@@ -1,0 +1,59 @@
+* { 
+    margin: 10px auto;
+}
+.contenedor { 
+    display: flex; 
+    flex-flow: row wrap;
+}
+
+legend { 
+    margin: 10px 10px;
+}
+
+.formulario { 
+    border: 1px solid gray;
+    width: 20%; 
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 3px rgba(1,1,1,0.7);
+    margin-top: 3%;
+    text-align: left;
+}
+
+/* Estilos para el formulario 1: 
+1) Todos los label deben de estar alienados verticalmente con sus respectivos controles de entrada
+2) Todos los controles de entrada deben ser del mismo tamaño 
+3) Tanto los labels como los inputs deben estar alineados a la izquierda 
+4) El span de al lado del campo Email se mostrará cuándo se vaya a rellenar dicho campo en un color de texto rojo, más pequeño que el resto de textos. 
+5) El botón debe de estar centrado*/
+
+label,input,select { 
+    display:block;
+    width: 50%; 
+    margin: 10px;
+}
+
+select + label,label > input { 
+    display: inline-block; 
+    width: auto;
+}
+
+label > input { 
+    display: inline;
+    margin: 0;
+}
+
+span { 
+    font-size: 0.7rem;
+    margin:10px;
+    display: none; 
+    color: red;
+}
+
+button { 
+    display: block; 
+    text-align: center;
+    width: 20%; 
+    margin: 10px auto;
+}
+

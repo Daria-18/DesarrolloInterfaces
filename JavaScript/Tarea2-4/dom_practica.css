@@ -1,0 +1,72 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+#panel-usuario {
+  background-color: #e3f2fd;
+}
+
+#panel-tareas {
+  background-color: #fbe9e7;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.35rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
+.boton-accion {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #00796b;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.boton-accion:hover {
+  background-color: #004d40;
+}
+
+#lista-tareas {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.tarea.importante {
+  font-weight: bold;
+}
+
+#instrucciones ol {
+  padding-left: 1.5rem;
+}
+
+#instrucciones li {
+  margin-bottom: 0.5rem;
+}

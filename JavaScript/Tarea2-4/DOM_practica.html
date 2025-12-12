@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Práctica DOM – Panel de usuario</title>
+  <link rel="stylesheet" href="dom_practica.css">
+</head>
+<body>
+
+  <h1 id="titulo-principal">Panel de usuario</h1>
+
+  <section id="panel-usuario">
+    <h2>Datos del usuario</h2>
+    <p>
+      Nombre: <span id="nombre-usuario">Invitado</span><br>
+      Rol: <span id="rol-usuario">Desconocido</span>
+    </p>
+
+    <form id="form-preferencias">
+      <h3>Preferencias</h3>
+
+      <label>
+        Correo electrónico:
+        <input type="email" name="email" value="alguien@example.com">
+      </label>
+
+      <label>
+        Contraseña:
+        <input type="password" name="password" value="123456">
+      </label>
+
+      <label>
+        Rol:
+        <select name="rol">
+          <option value="alumno">Alumno</option>
+          <option value="profesor">Profesor</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </label>
+
+      <button type="button" class="boton-accion" id="btn-guardar">
+        Guardar cambios
+      </button>
+    </form>
+  </section>
+
+  <section id="panel-tareas">
+    <h2>Lista de tareas</h2>
+    <ul id="lista-tareas">
+      <li class="tarea importante">Repasar sintaxis de JavaScript</li>
+      <li class="tarea">Practicar métodos del DOM</li>
+      <li class="tarea">Hacer ejercicios de objetos y funciones</li>
+    </ul>
+
+    <button type="button" class="boton-accion" id="btn-borrar-ultima">
+      Borrar última tarea
+    </button>
+  </section>
+
+  <section id="instrucciones">
+    <h2>Instrucciones (para usar en la consola)</h2>
+    <ol>
+      <li>
+        Muestra en consola el HTML del elemento con id <code>titulo-principal</code>
+        usando <code>document.getElementById</code>.
+      </li>
+      <li>
+        Muestra el primer elemento <code>&lt;input&gt;</code> del documento usando
+        <code>getElementsByTagName</code>.
+      </li>
+      <li>
+        Muestra el primer botón con clase <code>boton-accion</code> usando
+        <code>getElementsByClassName</code>.
+      </li>
+      <li>
+        Muestra el elemento de formulario cuyo atributo <code>name</code> sea
+        <code>"password"</code> usando <code>getElementsByName</code> y luego
+        muestra su <code>value</code>.
+      </li>
+      <li>
+        Muestra la última opción del <code>select</code> de rol usando
+        <code>querySelector("[name='rol'] &gt; option:last-child")</code>.
+      </li>
+      <li>
+        Recorre con un bucle todas las tareas (elementos con clase <code>tarea</code>)
+        usando <code>querySelectorAll</code> y muestra su <code>textContent</code>.
+      </li>
+      <li>
+        Cambia el nombre de usuario de "Invitado" a tu nombre usando
+        <code>document.getElementById("nombre-usuario").textContent</code>.
+      </li>
+      <li>
+        Añade una nueva tarea al final de la lista usando
+        <code>createElement</code>, <code>classList.add</code> y
+        <code>appendChild</code>.
+      </li>
+      <li>
+        Elimina la última tarea de la lista usando
+        <code>lista.lastElementChild.remove()</code>.
+      </li>
+      <li>
+        (Reto) Usa <code>addEventListener</code> desde la consola para que:
+        <ul>
+          <li>Al hacer clic en <code>#btn-guardar</code>, se muestre un mensaje en consola.</li>
+          <li>Al hacer clic en <code>#btn-borrar-ultima</code>, se borre la última tarea.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+</body>
+</html>
+
