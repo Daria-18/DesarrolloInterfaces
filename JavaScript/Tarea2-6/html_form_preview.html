@@ -86,15 +86,16 @@
 </body>
 <script>
     function validar() {
-    let inputUser = this.value;
-    if (inputUser.length==0) {
-        console.log("Introduce un input");
-      }
-    else if (inputUser.length<3) {
-        console.log("Nombre inválido, inserte al menos tres caracteres");
-      }
-    else{console.log("Todo OK!")}
+      let inputUser = this.value;
+      if (inputUser.length==0) {
+          console.log("Introduce un input");
+        }
+      else if (inputUser.length<3) {
+          console.log("Nombre inválido, inserte al menos tres caracteres");
+        }
+      else{console.log("Todo OK!")}
     }
+    
     let campoNombre = document.getElementById("nombre");
     campoNombre.addEventListener("input",validar);
 
