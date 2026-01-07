@@ -197,7 +197,7 @@ function validarFormulario(evento){
     let totalErrores = [];
     let totalValidos = [];
 
-    //Array asociativo de campo con el booleano
+    //Array asociativo de campo con su función correspondiente
     let campos = [
         {nombre: "Nombre", validacion: validarNombre},
         {nombre: "Edad", validacion: validarEdad},
