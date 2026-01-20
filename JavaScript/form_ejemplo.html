@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Formulario DOM</title>
+  <style>
+    body { font-family: system-ui; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<h2>Ejemplo 1: Formulario con DOM </h2>
+
+<label>
+  Nombre:
+  <input id="nombre" type="text" placeholder="Escribe tu nombre">
+</label>
+
+<p id="mensaje"></p>
+
+<script>
+const input = document.getElementById("nombre");
+const mensaje = document.getElementById("mensaje");
+
+// Nuestro "estado"
+let estado = { nombre: "" };
+
+input.addEventListener("input", function () {
+  estado.nombre = input.value;  // 1) Cambia el dato
+  actualizarInterfaz();          // 2) Actualiza el DOM
+});
+
+function actualizarInterfaz() {
+  mensaje.textContent = "Hola " + estado.nombre;
+}
+</script>
+
+</body>
+</html>

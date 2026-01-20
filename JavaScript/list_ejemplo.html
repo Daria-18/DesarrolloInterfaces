@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista dinámica DOM</title>
+  <style>
+    body { font-family: system-ui; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<h2>Ejemplo 2: Lista dinámica con DOM</h2>
+
+<input id="tarea" placeholder="Nueva tarea">
+<button id="btnAdd">Añadir</button>
+
+<ul id="lista"></ul>
+
+<script>
+const input = document.getElementById("tarea");
+const btn = document.getElementById("btnAdd");
+const lista = document.getElementById("lista");
+
+// Nuestro estado
+let tareas = [];
+
+btn.addEventListener("click", function () {
+  tareas.push(input.value);  // 1) Cambia el dato
+  input.value = "";
+  renderLista();             // 2) Actualiza el DOM
+});
+
+function renderLista() {
+  lista.innerHTML = "";  // Borramos todo
+
+  for (let i = 0; i < tareas.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = tareas[i];
+    lista.appendChild(li);
+  }
+}
+</script>
+
+</body>
+</html>
